@@ -1,0 +1,103 @@
+<html>
+    <style>
+        input[type=number]{
+            width:8%;
+        }
+        body{ 
+            background-color: antiquewhite;
+            
+        }
+        .container {
+            width:500px;
+            margin:5 auto;
+            padding:5px 15px;
+            border:2px solid black;
+       }
+       .container2{
+        width:500px;
+            margin:5 auto;
+            padding:5px 15px;
+            border:2px solid black;
+            background-color: azure;
+        
+
+       }
+    </style>
+    <body>
+        <div class="container">
+                <u><center><h3>Online Billing System</h3></center></u>
+                <b>Organisation Name:</b>
+              
+                <br>
+              
+                <input type="text" id="name">
+              
+                <br>
+                <br>
+                <b>Organisation Address:</b>
+                <br>
+                
+                <input type="text" id="address">
+                <br>
+                <br>
+                <b>Mob No:</b>
+                <br>
+                <input type="tel" id="mobno">
+                <br>
+                <br>
+                <b>Item Name:
+                <input type="text" id="itemname">
+                Qty:
+                <input type="number" id="qty">
+                Rate:
+                <input type="number" id="rate">
+                </b>
+                <br>
+                <br>
+                <button id="next" onClick="next()"><i>Next Item</i></button>
+                <button id="bill" onClick="generatebill()"><i>Generate Bill</i></button>
+                <button onClick="exit()"><i>Exit</i></button>
+                <Br>
+                    </div>
+                <script>
+                   
+var n=[];
+var q=[];
+var r=[];
+var orgname=document.getElementById("name").value;
+var orgadd=document.getElementById("address").value;
+var mobno=document.getElementById("mobno").value;
+function next(){
+    var name=document.getElementById('itemname').value;
+    var qty=document.getElementById('qty').value ;
+    var rate=document.getElementById('rate').value;
+  n.push(name);
+  q.push(qty);
+  r.push(rate);  
+}
+function exit(){
+				var conf=confirm("Are you sure, you want to close this tab?");
+				if(conf==true){
+					close();
+				}
+function generatebill(){
+    document.write(orgname);
+}
+ </script>
+
+
+<div class="container2">
+ 
+</div>
+
+            
+
+
+               
+
+
+    </body>
+    
+
+    
+</html>
