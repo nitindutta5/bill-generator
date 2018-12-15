@@ -52,32 +52,35 @@
 	
 		<div class="display">
 		  <ul class="mylist" >
-			 <center><h2> <b><li id="orgname"></li></b></h2></center>
-			 <center><h4><b><li id="orgaddress" class="hr"></b></li></h4></center> 
-			 <h4><u><li id="name"></u></li></h4>
-			  <h4><li id="no" class="hr"></li></h4>
+			 <center><h2> <b><li class="list-group-item" id="orgname"></li></b></h2></center>
+			 <center><h4><b><li id="orgaddress" class="hr"></li</b></h4></center> 
+			 <h4><b><li class="list-group-item" id="name"></li></b></h4>
+			  <h4><b><li id="no" class="hr"></li></b></h4>
 			<b> Date: <p id="demo"></p></b>
 <script>
 var d = new Date();
 document.getElementById("demo").innerHTML = d;
 </script>
 	</ul>
-<table>
+<center>
+	<table class="table table-bordered">
 	<tr>
-		<td>Item</td>
-		<td></td>
-		<td>Qty</td>
-		<td></td>
-		<td>Rate</td>
-		<td></td>
-		<td>Amt</td>
+		<th><b>Item</b></th>
+		
+		<th><b>Qty</b></th>
+	
+		<th><b>Rate</b></th>
+		
+		<th><b>Amt</b></th>
 	</tr>
 	<td id="itemName"></td>
-	<td></td>
+	
 	<td id="quantity"></td>
-	<td></td>
-	<td  id="r"></td>    
+	
+	<td  id="r"></td> 
+	<td></td> 
  </table>
+</center>
 			  
 		
 		</div>
@@ -105,9 +108,7 @@ document.getElementById("demo").innerHTML = d;
 
 		function next () {
 
-			var name=document.getElementById('itemname')
-			var qty=document.getElementById('qty')
-			var rate=document.getElementById('rate')
+		
 
 			n.push(name);
 			q.push(qty);
