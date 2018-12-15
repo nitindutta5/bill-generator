@@ -9,7 +9,7 @@
 	<body>
 		
 		<div class="container">
-			<IMG SRC="download.png" ALT="some text" WIDTH=60 HEIGHT=50>
+		
 				<u><center><h3 class="heading">Online Billing System</h3></center></u>
 			
 			<b>Organisation Name:</b>
@@ -45,21 +45,41 @@
 			<br>
 			<br>
 			<button class="btn btn-primary" id="next" onClick="next()"><i>Add Item</i></button>&nbsp;
-			<button class="btn btn-success"id="bill" onClick="generatebill()"><i>Generate Bill</i></button>&nbsp
+			<button class="btn btn-success"id="bill" onClick="generatebill()"><i>Generate Bill</i></button>&nbsp;
 			<button class="btn btn-danger" onClick="exit()"><i>Exit</i></button>
 			<br>
 		</div>
 	
 		<div class="display">
-		  <ul>
-			  <li id="orgname"></li>
-			  <li id="orgaddress"></li>
-			  <li id="name"></li>
-			  <li id="no"></li>
-			  <li id="itemName"></li>
-			  <li id="quantity"></li>
-			  <li id="r"></li>
-			</ul>
+		  <ul class="mylist" >
+			 <center><h2> <b><li id="orgname"></li></b></h2></center>
+			 <center><h4><b><li id="orgaddress" class="hr"></b></li></h4></center> 
+			 <h4><u><li id="name"></u></li></h4>
+			  <h4><li id="no" class="hr"></li></h4>
+			<b> Date: <p id="demo"></p></b>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+	</ul>
+<table>
+	<tr>
+		<td>Item</td>
+		<td></td>
+		<td>Qty</td>
+		<td></td>
+		<td>Rate</td>
+		<td></td>
+		<td>Amt</td>
+	</tr>
+	<td id="itemName"></td>
+	<td></td>
+	<td id="quantity"></td>
+	<td></td>
+	<td  id="r"></td>    
+ </table>
+			  
+		
 		</div>
 
 	
@@ -108,10 +128,10 @@
 			if(conf==true){
 				close();
 			}
-		} // You were missing a curly bracket at the end of the function.
+		}
 
 
-		function generatebill() {
+		
 // 			document.write("Org Name: " + orgname.value + `<br>` + "Address: " + orgadd.value + `<br>` + "Customer Name:" + custname.value);
 // var i=1;
 // 			while(i<=n.length){
@@ -119,13 +139,13 @@
 // 				i++;
 // 			}
 // 		}
-
-			document.getElementById("orgname").innerHTML = orgname.value;
+function generatebill() {
+		    document.getElementById("orgname").innerHTML = orgname.value;
 			document.getElementById("orgaddress").innerHTML = orgadd.value;
 			document.getElementById("name").innerHTML = cname.value;
 			document.getElementById("no").innerHTML = mobno.value;
 			document.getElementById("itemName").innerHTML = item.value;
-			console.log(item.value)
+	
 			document.getElementById("quantity").innerHTML = qty.value;
 			document.getElementById("r").innerHTML = rate.value;
 }
