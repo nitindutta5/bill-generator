@@ -17,7 +17,7 @@
 			<input class="form-control" type="text" id="organisationname" placeholder="Name of the Organisation">
 			<br>
 			<b>Organisation Address:</b>
-			<br>
+			<br>	
 			<input class="form-control" type="text" id="address" placeholder="Address">
 			<br>
             
@@ -105,16 +105,13 @@ document.getElementById("demo").innerHTML = d;
 		 var quantity=document.getElementById('qty');
 		var rate=document.getElementById('rate');
 		var amt= parseFloat(rate *quantity);
-			
+		
 		
 
 		function next () {
-
-		
-
-			 pn.push(name);
-			 pq.push(qty);
-             pr.push(rate); 
+			pn.push(name);
+			pq.push(qty);
+			pr.push(rate); 
 			 document.getElementById('itemname').value="";
 			 document.getElementById('qty').value="";
 			 document.getElementById('rate').value="";
@@ -137,16 +134,14 @@ document.getElementById("demo").innerHTML = d;
 // 			}
 // 		}
 function generatebill() {
-		    document.getElementById("orgname").innerHTML = orgname.value;
+			document.getElementById("orgname").innerHTML = orgname.value;
 			document.getElementById("orgaddress").innerHTML = orgadd.value;
 			document.getElementById("name").innerHTML = cname.value;
 			document.getElementById("no").innerHTML = mobno.value;
 			document.getElementById("itemName").innerHTML = item.value;
-	
 			document.getElementById("quantity").innerHTML = qty.value;
 			document.getElementById("r").innerHTML = rate.value;
 			document.getElementById("test").innerHTML= amt;
-			
 }
 
 		// as you can see the (.value) works because now the html is parsed after the user entered the value and is stored in the form of HTML object now you can access the value.
