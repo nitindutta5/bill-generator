@@ -102,9 +102,11 @@ document.getElementById("demo").innerHTML = d;
 		 var mobno=document.getElementById("mobno");
 		 var cname = document.getElementById("custname")	;
 		 var item=document.getElementById("itemname");
-		 var quantity=document.getElementById('qty');
-		var rate=document.getElementById('rate');
-		var amt= parseFloat(rate *quantity);
+		var pquantity=document.getElementById('qty').value;
+		var prate=document.getElementById('rate');
+	
+		var amt= pquantity*prate;
+		console.log(pquantity);
 			
 		
 
@@ -145,7 +147,8 @@ function generatebill() {
 	
 			document.getElementById("quantity").innerHTML = qty.value;
 			document.getElementById("r").innerHTML = rate.value;
-			document.getElementById("test").innerHTML= amt;
+		
+			document.getElementById("test").innerHTML= ;
 			
 }
 
