@@ -17,7 +17,7 @@
 			<input class="form-control" type="text" id="organisationname" placeholder="Name of the Organisation">
 			<br>
 			<b>Organisation Address:</b>
-			<br>
+			<br>	
 			<input class="form-control" type="text" id="address" placeholder="Address">
 			<br>
             
@@ -45,7 +45,7 @@
 			<br>
 			<br>
 			<button class="btn btn-primary" id="next" onClick="next()"><i>Add Item</i></button>&nbsp;
-			<button class="btn btn-success"id="bill" onClick="generatebill()"><i>Generate Bill</i></button>&nbsp;
+			<button class="btn btn-success"id="bill" onClick="generatebill();"><i>Generate Bill</i></button>&nbsp;
 			<button class="btn btn-danger" onClick="exit()"><i>Exit</i></button>
 			<br>
 		</div>
@@ -58,8 +58,8 @@
 			  <h4><b><li id="no" class="hr"></li></b></h4>
 			<b> Date: <p id="demo"></p></b>
 <script>
-var d = new Date();
-document.getElementById("demo").innerHTML = d;
+var date = new Date();
+document.getElementById("demo").innerHTML = date;
 </script>
 	</ul>
 <center>
@@ -81,43 +81,29 @@ document.getElementById("demo").innerHTML = d;
 	<td><p id="test"></p></td> 
  </table>
 </center>
-			  
-		
-		</div>
-
-	
-
-	</body>
+</div>
+</body>
 	<script>
 								 
-	var pn=[];
+		var pn=[];
 		var pq=[];
-		 var pr=[];
+		var pr=[];
 
 
-		var orgname=document.getElementById("organisationname");// this wont work because this is not an object. And value here means (see line no: 13) an property of the input tag. So when you call value it wont get you the user input. At this point it will target the attribute value and not the object property.
-
-		 var orgadd=document.getElementById("address");
-	
-		 var mobno=document.getElementById("mobno");
-		 var cname = document.getElementById("custname")	;
-		 var item=document.getElementById("itemname");
-		 var quantity=document.getElementById('qty');
+		var orgname=document.getElementById("organisationname");
+		var orgadd=document.getElementById("address");
+		var mobno=document.getElementById("mobno");
+		var cname = document.getElementById("custname")	;
+		var item=document.getElementById("itemname");
+		var quantity=document.getElementById('qty');
 		var rate=document.getElementById('rate');
-		var amt= parseFloat(rate *quantity);
-			
 		
-
 		function next () {
-
-		
-
-			 pn.push(name);
-			 pq.push(qty);
-             pr.push(rate); 
-			 document.getElementById('itemname').value="";
-			 document.getElementById('qty').value="";
-			 document.getElementById('rate').value="";
+			pn.push(name);
+			pr.push(rate); 
+			document.getElementById('itemname').value="";
+			document.getElementById('qty').value="";
+		 	document.getElementById('rate').value="";
 		}
 
 		function exit() {
@@ -128,25 +114,15 @@ document.getElementById("demo").innerHTML = d;
 			}
 		}
 
-
-		
-
-// 			while(i<=n.length){
-// 				document.write(i + n[i]+" "+q[i]+" "+r[i]);
-// 				i++;
-// 			}
-// 		}
 function generatebill() {
-		    document.getElementById("orgname").innerHTML = orgname.value;
+			document.getElementById("orgname").innerHTML = orgname.value;
 			document.getElementById("orgaddress").innerHTML = orgadd.value;
 			document.getElementById("name").innerHTML = cname.value;
 			document.getElementById("no").innerHTML = mobno.value;
 			document.getElementById("itemName").innerHTML = item.value;
-	
-			document.getElementById("quantity").innerHTML = qty.value;
+			document.getElementById("quantity").innerHTML = quantity.value;
 			document.getElementById("r").innerHTML = rate.value;
-			document.getElementById("test").innerHTML= amt;
-			
+			document.getElementById("test").innerHTML= quantity.value * rate.value;
 }
 
 		// as you can see the (.value) works because now the html is parsed after the user entered the value and is stored in the form of HTML object now you can access the value.
