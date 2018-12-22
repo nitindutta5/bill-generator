@@ -139,14 +139,12 @@ function generatebill() {
 			document.getElementById("quantity1").innerHTML = pq[0];
 			document.getElementById("r1").innerHTML = pr[0];
 			var an1=document.getElementById("test1").innerHTML= pq[0] * pr[0];
-
 			document.getElementById("itemName2").innerHTML =pn[1];
 			document.getElementById("quantity2").innerHTML = pq[1];
 			document.getElementById("r2").innerHTML = pr[1];
 			var an2 =document.getElementById("test2").innerHTML= pq[1] * pr[1];
-
-document.getElementById("total").innerHTML ="<b>"+"Total"+"</b>";
-document.getElementById("totalamt").innerHTML =an1+an2+ "/-";
+            document.getElementById("total").innerHTML ="<b>"+"Total"+"</b>";
+            document.getElementById("totalamt").innerHTML =an1+an2+ "/-";
 			
 		
 }
